@@ -8,7 +8,7 @@ import android.widget.TextView;
 public class Output extends Activity {
 	private double height = 0;
 	private double weight = 0;
-	private boolean imperial; 
+	private boolean imperial = false; 
 	private double bmi = 0;
 	
 	/** Called when the activity is first created. */
@@ -26,10 +26,10 @@ public class Output extends Activity {
         	bmi *= 703;
         }
         
-        System.out.println(" height :" + height);
+     /*   System.out.println(" height :" + height);
         System.out.println(" weight :" + weight);
         System.out.println(" bmi :" + bmi);
-        System.out.println(" imperial :" + (imperial ? "true" : "false"));
+        System.out.println(" imperial :" + (imperial ? "true" : "false"));*/
         
         TextView result = (TextView) findViewById(R.id.result);
         result.setText(
@@ -39,7 +39,7 @@ public class Output extends Activity {
     		)
         );
 	}
-	
+    
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.activity_main, menu);

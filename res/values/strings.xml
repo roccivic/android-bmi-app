@@ -4,8 +4,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">BMI Calculator</string>
-    <string name="imperial">Imperial</string>
-    <string name="metric">Metric</string>
+    <string name="imperial">Imperial (pounds and inches)</string>
+    <string name="metric">Metric (kilograms and centimeters)</string>
     <string name="choose_unit">Please choose the desired unit of measurement</string>
     <string name="input_data_text">Please fill in all the fields</string>
     <string name="calculate">Calculate</string>
