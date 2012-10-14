@@ -8,15 +8,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class DataInput extends Activity {
+	private boolean imperial; 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
         
-        boolean imperial = (boolean) getIntent().getBooleanExtra("imperial", false);
+        imperial = (boolean) getIntent().getBooleanExtra("imperial", false);
 
         if (! imperial) {
         	TextView t = (TextView) findViewById(R.id.height_text);
@@ -28,7 +30,40 @@ public class DataInput extends Activity {
         final Button button = (Button) findViewById(R.id.calculate);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            	errorDialog(R.string.invalid);
+	            EditText[] inputs = {
+	                (EditText) findViewById(R.id.height),
+	                (EditText) findViewById(R.id.weight)
+            	};
+	            TextView[] labels = {
+		            (TextView) findViewById(R.id.height_text),
+		            (TextView) findViewById(R.id.weight_text)
+	            };
+	            int colors[] = {
+            		getResources().getColor(R.color.normal),
+            		getResources().getColor(R.color.error)
+	            };
+               	int height = 0;
+        		try {
+        			height = Integer.parseInt(inputs[0].getText().toString());
+        		} catch (Exception e) {}
+               	int weight = 0;
+        		try {
+        			weight = Integer.parseInt(inputs[1].getText().toString());
+        		} catch (Exception e) {}
+        		labels[0].setTextColor(colors[0]);
+        		labels[1].setTextColor(colors[0]);
+            	if (height <= 0 || weight <= 0) {
+            		errorDialog(R.string.invalid);
+            		if (height <= 0) {
+            			labels[0].setTextColor(colors[1]);
+            		}
+            		if (weight <= 0) {
+            			labels[1].setTextColor(colors[1]);
+            		}
+            	} else {
+            		// call final screen
+            		
+            	}
             }
         });
     }
