@@ -7,5 +7,12 @@
     <string name="imperial">Imperial</string>
     <string name="metric">Metric</string>
     <string name="choose_unit">Please choose the desired unit of measurement</string>
-
+    <string name="input_data_text">Please fill in all the fields</string>
+    <string name="calculate">Calculate</string>
+    <string name="metric_your_height">Your height (cm):</string>
+    <string name="metric_your_weight">Your weight (kg):</string>
+    <string name="imperial_your_height">Your height (in):</string>
+    <string name="imperial_your_weight">Your weight (lb):</string>
+    <string name="invalid">Invalid input data</string>
+    <string name="ok">OK</string>
 </resources>
