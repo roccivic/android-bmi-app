@@ -73,22 +73,17 @@ public class DataInput extends Activity {
             			labels[1].setTextColor(colors[1]);
             		}
             	} else {
-            		Button button = (Button) findViewById(R.id.calculate);
-                    button.setOnClickListener(new View.OnClickListener() {
-                        public void onClick(View v) {
-                        	Bundle b = new Bundle();
-                        	b.putBoolean("imperial", imperial);
-                        	if (! imperial) {
-                            	b.putDouble("height", (double)height / 100);
-                        	} else {
-                        		b.putDouble("height", (double)height);
-                        	}
-                        	b.putInt("weight", weight);
-                        	Intent i = new Intent(self, Output.class);
-                        	i.putExtras(b);
-                        	startActivity(i);
-                        }
-                    });            		
+                	Bundle b = new Bundle();
+                	b.putBoolean("imperial", imperial);
+                	if (! imperial) {
+                    	b.putDouble("height", (double)height / 100);
+                	} else {
+                		b.putDouble("height", (double)height);
+                	}
+                	b.putInt("weight", weight);
+                	Intent i = new Intent(self, Output.class);
+                	i.putExtras(b);
+                	startActivity(i);
             	}
             	update(height, weight);
             }
