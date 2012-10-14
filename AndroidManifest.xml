@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name="DataInput"></activity>
+        <activity android:name="Output"></activity>
     </application>
 
 </manifest>

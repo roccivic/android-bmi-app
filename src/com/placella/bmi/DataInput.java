@@ -4,6 +4,7 @@ import com.placella.bmi.R;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -12,6 +13,9 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class DataInput extends Activity {
+	private DataInput self = this;
+	private int height = 0;
+	private int weight = 0;
 	private boolean imperial; 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,11 +46,9 @@ public class DataInput extends Activity {
             		getResources().getColor(R.color.normal),
             		getResources().getColor(R.color.error)
 	            };
-               	int height = 0;
         		try {
         			height = Integer.parseInt(inputs[0].getText().toString());
         		} catch (Exception e) {}
-               	int weight = 0;
         		try {
         			weight = Integer.parseInt(inputs[1].getText().toString());
         		} catch (Exception e) {}
@@ -61,8 +63,22 @@ public class DataInput extends Activity {
             			labels[1].setTextColor(colors[1]);
             		}
             	} else {
-            		// call final screen
-            		
+            		Button button = (Button) findViewById(R.id.calculate);
+                    button.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+                        	Bundle b = new Bundle();
+                        	b.putBoolean("imperial", imperial);
+                        	if (! imperial) {
+                            	b.putDouble("height", (double)height / 100);
+                        	} else {
+                        		b.putDouble("height", (double)height);
+                        	}
+                        	b.putInt("weight", weight);
+                        	Intent i = new Intent(self, Output.class);
+                        	i.putExtras(b);
+                        	startActivity(i);
+                        }
+                    });            		
             	}
             }
         });
