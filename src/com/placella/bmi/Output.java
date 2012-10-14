@@ -45,4 +45,21 @@ public class Output extends Activity {
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
+    
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+	    super.onSaveInstanceState(outState);		
+	    outState.putDouble("height", height);
+	    outState.putDouble("weight", weight);
+	    outState.putBoolean("imperial", imperial);
+	    outState.putDouble("bmi", bmi);
+    }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+	    super.onRestoreInstanceState(savedInstanceState);
+	    height = savedInstanceState.getDouble("height");
+	    weight = savedInstanceState.getDouble("weight");
+	    imperial = savedInstanceState.getBoolean("imperial");
+	    bmi = savedInstanceState.getDouble("bmi");
+    }
 }

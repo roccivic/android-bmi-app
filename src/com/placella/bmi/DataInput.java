@@ -140,4 +140,19 @@ public class DataInput extends Activity {
 		} catch (Exception e) {}
 		return retval; // [ height, weight]
     }
+    
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+	    super.onSaveInstanceState(outState);		
+	    outState.putInt("height", height);
+	    outState.putInt("weight", weight);
+	    outState.putBoolean("imperial", imperial);
+    }
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+	    super.onRestoreInstanceState(savedInstanceState);
+	    height = savedInstanceState.getInt("height");
+	    weight = savedInstanceState.getInt("weight");
+	    imperial = savedInstanceState.getBoolean("imperial");
+    }
 }
