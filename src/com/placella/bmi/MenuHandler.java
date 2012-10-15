@@ -1,7 +1,6 @@
 package com.placella.bmi;
 
-import android.app.Activity;
-import android.app.AlertDialog;
+import android.app.*;
 import android.content.*;
 import android.net.Uri;
 import android.view.MenuItem;
@@ -15,20 +14,13 @@ public class MenuHandler {
 			Uri u = Uri.parse(url);
 			i.setData(u);
 			try {
-				// Start the activity
 				self.startActivity(i);
 			} catch (ActivityNotFoundException e) {
-				// Raise on activity not found
 				Toast message = Toast.makeText(self, "Browser not found.", Toast.LENGTH_SHORT);
 				message.show();
 			}
         } else if (item.getItemId() == R.id.about) {
-        	new AlertDialog
-	    	    .Builder(self)
-		    	.setMessage(R.string.about_text)
-		    	.setPositiveButton(R.string.ok, null)
-		    	.create()
-		    	.show();
+        	new MessageDialog(self, R.string.about_text).show();
         }
     }
 }

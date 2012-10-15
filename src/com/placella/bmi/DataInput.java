@@ -60,7 +60,7 @@ public class DataInput extends Activity {
         		labels[0].setTextColor(colors[0]);
         		labels[1].setTextColor(colors[0]);
             	if (height <= 0 || weight <= 0) {
-            		errorDialog(R.string.invalid);
+                	new MessageDialog(self, R.string.invalid).show();
             		if (height <= 0) {
             			labels[0].setTextColor(colors[1]);
             		}
@@ -116,15 +116,6 @@ public class DataInput extends Activity {
     public boolean onOptionsItemSelected(MenuItem item) {
     	MenuHandler.onOptionsItemSelected(item, this);
 		return super.onOptionsItemSelected(item);
-    }
-    
-    public void errorDialog(int message) {
-    	new AlertDialog
-    	    .Builder(this)
-	    	.setMessage(message)
-	    	.setPositiveButton(R.string.ok, null)
-	    	.create()
-	    	.show();
     }
     
     private int[] getValues() {
