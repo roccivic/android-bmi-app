@@ -16,21 +16,13 @@ public class Output extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_output);
-        
         height = getIntent().getDoubleExtra("height", 0);
         weight = (int) getIntent().getIntExtra("weight", 0);
         imperial = (boolean) getIntent().getBooleanExtra("imperial", false);
         bmi = (weight / (height*height));
-        
         if (imperial) {
         	bmi *= 703;
         }
-        
-     /*   System.out.println(" height :" + height);
-        System.out.println(" weight :" + weight);
-        System.out.println(" bmi :" + bmi);
-        System.out.println(" imperial :" + (imperial ? "true" : "false"));*/
-        
         TextView result = (TextView) findViewById(R.id.result);
         result.setText(
         	String.format(
@@ -38,26 +30,24 @@ public class Output extends Activity {
     			bmi
     		)
         );
-        
 	}
 	
 	@Override
 	public void onWindowFocusChanged(boolean hasFocus) {
 		super.onWindowFocusChanged(hasFocus);
-		if (hasFocus) {
-	        ImageView bar = (ImageView) findViewById(R.id.bar);
-	        int width = bar.getWidth();
-	        int offset = 0;
-	        if (bmi > 32.5) {
-	        	offset = width;
-	        } else if (bmi > 17.5) {
-	        	offset = (int)((bmi - 17.5) / (32.5 - 17.5) * width);
-	        }
-	        ImageView marker = (ImageView) findViewById(R.id.marker);
-	        marker.setPadding(offset, 0, 0, 0);
-		}
+        ImageView marker = (ImageView) findViewById(R.id.marker);
+        ImageView bar = (ImageView) findViewById(R.id.bar);
+        int padding = marker.getWidth() / 2;
+        bar.setPadding(padding, 0, padding, 0);
+        int width = bar.getWidth();
+        int offset = 0;
+        if (bmi > 32.5) {
+        	offset = width - marker.getWidth();
+        } else if (bmi > 17.5) {
+        	offset = (int)((bmi - 17.5) / (32.5 - 17.5) * (width - marker.getWidth()));
+        }
+        marker.setPadding(offset, 0, 0, 0);
 	}
-
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -80,6 +70,7 @@ public class Output extends Activity {
 	    outState.putBoolean("imperial", imperial);
 	    outState.putDouble("bmi", bmi);
     }
+    
     @Override
     public void onRestoreInstanceState(Bundle savedInstanceState) {
 	    super.onRestoreInstanceState(savedInstanceState);
