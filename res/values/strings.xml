@@ -1,5 +1,4 @@
 <resources>
-
     <string name="app_name">BMI</string>
     <string name="hello_world">Hello world!</string>
     <string name="source_code">Get the source code</string>
@@ -16,4 +15,5 @@
     <string name="invalid">Invalid input data</string>
     <string name="ok">OK</string>
     <string name="result_header">Your BMI is: %.0f</string>
+    <string name="about">About</string>
 </resources>
