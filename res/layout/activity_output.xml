@@ -185,7 +185,7 @@
 
     <ImageView
         android:id="@+id/bar"
-        android:contentDescription="@string/empty"
+        android:contentDescription=""
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -201,7 +201,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/linearLayout4"
         android:layout_alignTop="@+id/bar"
-        android:contentDescription="@string/empty"
+        android:contentDescription=""
         android:scaleType="center"
         android:src="@drawable/ic_marker" />
 

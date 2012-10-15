@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">BMI</string>
-    <string name="hello_world">Hello world!</string>
     <string name="source_code">Get the source code</string>
     <string name="title_activity_main">BMI Calculator</string>
     <string name="imperial">Imperial (pounds and inches)</string>
@@ -26,5 +25,4 @@
     <string name="lt25">20 &#8211; 25</string>
     <string name="lt30">25 &#8211; 30</string>
     <string name="gt30">&gt; 30</string>
-    <string name="empty"/>
 </resources>
