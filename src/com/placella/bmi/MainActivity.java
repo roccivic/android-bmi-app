@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
         
         prefs = getSharedPreferences("bmi_values", 0);
         imperialHeight = prefs.getInt("imperialHeight", 0);
-        imperialWeight = prefs.getInt("view_mode", 0); 
+        imperialWeight = prefs.getInt("imperialWeight", 0); 
         metricHeight = prefs.getInt("metricHeight", 0);
         metricWeight = prefs.getInt("metricWeight", 0);
         
