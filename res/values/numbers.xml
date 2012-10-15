@@ -1,0 +1,5 @@
+<resources>
+    <integer name="Chart_1">20</integer>
+    <integer name="Chart_2">25</integer>
+    <integer name="Chart_3">30</integer>
+</resources>

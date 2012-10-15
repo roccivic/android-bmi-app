@@ -23,7 +23,8 @@
     <string name="overweight">Overweight</string>
     <string name="obese">Obese</string>
     <string name="lt10">&lt; 20</string>
-    <string name="lt25">20 - 25</string>
-    <string name="lt30">25 - 30</string>
-    <string name="gt30">> 30</string>
+    <string name="lt25">20 &#8211; 25</string>
+    <string name="lt30">25 &#8211; 30</string>
+    <string name="gt30">&gt; 30</string>
+    <string name="empty"/>
 </resources>

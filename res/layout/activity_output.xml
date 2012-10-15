@@ -160,7 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="20"
+            android:text="@integer/Chart_1"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -169,7 +169,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="25"
+            android:text="@integer/Chart_2"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <TextView
@@ -178,13 +178,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="30"
+            android:text="@integer/Chart_3"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-        
+
         </LinearLayout>
-    
+
     <ImageView
         android:id="@+id/bar"
+        android:contentDescription="@string/empty"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -194,13 +195,14 @@
         android:scaleType="fitXY"
         android:src="@drawable/ic_bar" />
 
-	<ImageView
-	    android:id="@+id/marker"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:layout_alignLeft="@+id/linearLayout4"
-	    android:layout_alignTop="@+id/bar"
-	    android:scaleType="center"
-	    android:src="@drawable/ic_marker" />
+    <ImageView
+        android:id="@+id/marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout4"
+        android:layout_alignTop="@+id/bar"
+        android:contentDescription="@string/empty"
+        android:scaleType="center"
+        android:src="@drawable/ic_marker" />
 
 </RelativeLayout>
