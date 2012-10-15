@@ -88,6 +88,7 @@ public final class R {
         public static final int metric=0x7f060005;
         public static final int metric_your_height=0x7f060008;
         public static final int metric_your_weight=0x7f060009;
+        public static final int nobrowser=0x7f06001a;
         public static final int normal=0x7f060013;
         public static final int obese=0x7f060015;
         public static final int ok=0x7f06000d;
