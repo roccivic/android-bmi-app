@@ -17,4 +17,13 @@
     <string name="result_header">Your BMI is: %.0f</string>
     <string name="about">About</string>
     <string name="about_text">BMI calculator\nversion 1.0\nOctober 2012</string>
+    <string name="classification">BMI classification</string>
+    <string name="underweight">Underweight</string>
+    <string name="normal">Normal</string>
+    <string name="overweight">Overweight</string>
+    <string name="obese">Obese</string>
+    <string name="lt10">&lt; 20</string>
+    <string name="lt25">20 - 25</string>
+    <string name="lt30">25 - 30</string>
+    <string name="gt30">> 30</string>
 </resources>

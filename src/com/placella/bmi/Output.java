@@ -2,9 +2,8 @@ package com.placella.bmi;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.*;
+import android.widget.*;
 
 public class Output extends Activity {
 	private double height = 0;
@@ -39,7 +38,26 @@ public class Output extends Activity {
     			bmi
     		)
         );
+        
 	}
+	
+	@Override
+	public void onWindowFocusChanged(boolean hasFocus) {
+		super.onWindowFocusChanged(hasFocus);
+		if (hasFocus) {
+	        ImageView bar = (ImageView) findViewById(R.id.bar);
+	        int width = bar.getWidth();
+	        int offset = 0;
+	        if (bmi > 32.5) {
+	        	offset = width;
+	        } else if (bmi > 17.5) {
+	        	offset = (int)((bmi - 17.5) / (32.5 - 17.5) * width);
+	        }
+	        ImageView marker = (ImageView) findViewById(R.id.marker);
+	        marker.setPadding(offset, 0, 0, 0);
+		}
+	}
+
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

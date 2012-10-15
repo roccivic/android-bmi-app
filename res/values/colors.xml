@@ -1,5 +1,8 @@
-
-    <resources>
-        <color name="error">#af0000</color>
-        <color name="normal">#000</color>
-    </resources>
+<resources>
+    <color name="error">#af0000</color>
+    <color name="normal">#000</color>
+    <color name="bmi_obese">#fabed1</color>
+    <color name="bmi_overweight">#ffffb9</color>
+    <color name="bmi_normal">#bfefc4</color>
+    <color name="bmi_underweight">#bfd2ef</color>
+</resources>
