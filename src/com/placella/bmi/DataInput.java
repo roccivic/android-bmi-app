@@ -37,11 +37,7 @@ public class DataInput extends Activity {
         	t = (TextView) findViewById(R.id.weight_text);
             t.setText(R.string.metric_your_weight);
         }
-        Intent returnIntent = new Intent();
-    	returnIntent.putExtra("height", height);
-    	returnIntent.putExtra("weight", weight);
-    	returnIntent.putExtra("imperial", imperial);
-    	setResult(0, returnIntent);
+        update(height, weight);
         
         Button button = (Button) findViewById(R.id.calculate);
         button.setOnClickListener(new View.OnClickListener() {
