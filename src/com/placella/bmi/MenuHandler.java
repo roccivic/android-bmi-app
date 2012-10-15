@@ -25,7 +25,7 @@ public class MenuHandler {
         } else if (item.getItemId() == R.id.about) {
         	new AlertDialog
 	    	    .Builder(self)
-		    	.setMessage("BMI calculator\nversion 1.0\nOctober 2012")
+		    	.setMessage(R.string.about_text)
 		    	.setPositiveButton(R.string.ok, null)
 		    	.create()
 		    	.show();

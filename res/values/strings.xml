@@ -16,4 +16,5 @@
     <string name="ok">OK</string>
     <string name="result_header">Your BMI is: %.0f</string>
     <string name="about">About</string>
+    <string name="about_text">BMI calculator\nversion 1.0\nOctober 2012</string>
 </resources>
