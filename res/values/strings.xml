@@ -2,7 +2,7 @@
 
     <string name="app_name">BMI</string>
     <string name="hello_world">Hello world!</string>
-    <string name="menu_settings">Settings</string>
+    <string name="source_code">Get the source code</string>
     <string name="title_activity_main">BMI Calculator</string>
     <string name="imperial">Imperial (pounds and inches)</string>
     <string name="metric">Metric (kilograms and centimeters)</string>

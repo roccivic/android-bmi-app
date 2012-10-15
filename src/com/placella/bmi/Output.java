@@ -3,6 +3,7 @@ package com.placella.bmi;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class Output extends Activity {
@@ -42,8 +43,15 @@ public class Output extends Activity {
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+    	super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	MenuHandler.onOptionsItemSelected(item, this);
+		return super.onOptionsItemSelected(item);
     }
     
     @Override

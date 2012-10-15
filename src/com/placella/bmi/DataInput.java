@@ -2,16 +2,11 @@ package com.placella.bmi;
 
 import com.placella.bmi.R;
 
-import android.app.Activity;
-import android.app.AlertDialog;
+import android.app.*;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
+import android.view.*;
+import android.widget.*;
 
 public class DataInput extends Activity {
 	private DataInput self = this;
@@ -115,6 +110,12 @@ public class DataInput extends Activity {
     	super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
+    }
+    
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+    	MenuHandler.onOptionsItemSelected(item, this);
+		return super.onOptionsItemSelected(item);
     }
     
     public void errorDialog(int message) {
