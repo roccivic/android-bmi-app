@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Calcolatore dell\'Indice di Massa Corporea</string>
+    <string name="source_code">Scarica il codice sorgente</string>
+    <string name="title_activity_main">Calcolatore dell\'IMC</string>
+    <string name="choose_unit">Scegli la desiderata unita di misura</string>
+    <string name="imperial">Imperiale (libre e pollici)</string>
+    <string name="metric">Metrica (chilogrammi and centimetri)</string>
+    <string name="input_data_text">Inserisci i tuoi dati nelle caselle sottostanti</string>
+    <string name="calculate">Calcola</string>
+    <string name="metric_your_height">La tua altezza (cm):</string>
+    <string name="metric_your_weight">Il tuo peso (kg):</string>
+    <string name="imperial_your_height">La tua altezza (in):</string>
+    <string name="imperial_your_weight">Il tuo peso (lb):</string>
+    <string name="invalid">I dati inseriti non sono validi</string>
+    <string name="ok">OK</string>
+    <string name="result_header">Il tuo indice di massa corporea é: %.0f</string>
+    <string name="about">Informazioni</string>
+    <string name="about_text">Calcolatore dell\'IMC\nversione 1.0\nOttobre 2012</string>
+    <string name="classification">Classificazione dell\'IMC</string>
+    <string name="underweight">Sottopeso</string>
+    <string name="normal">Normale</string>
+    <string name="overweight">Sovrappeso</string>
+    <string name="obese">Obeso</string>
+    <string name="lt10">&lt; 20</string>
+    <string name="lt25">20 &#8211; 25</string>
+    <string name="lt30">25 &#8211; 30</string>
+    <string name="gt30">&gt; 30</string>
+</resources>

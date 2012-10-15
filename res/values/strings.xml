@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">BMI</string>
+    <string name="app_name">Body Mass Index Calculator</string>
     <string name="source_code">Get the source code</string>
     <string name="title_activity_main">BMI Calculator</string>
+    <string name="choose_unit">Please choose the desired unit of measurement</string>
     <string name="imperial">Imperial (pounds and inches)</string>
     <string name="metric">Metric (kilograms and centimeters)</string>
-    <string name="choose_unit">Please choose the desired unit of measurement</string>
     <string name="input_data_text">Please fill in all the fields</string>
     <string name="calculate">Calculate</string>
     <string name="metric_your_height">Your height (cm):</string>
