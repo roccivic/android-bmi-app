@@ -84,7 +84,8 @@ public class DataInput extends Activity {
             }
         });
     }
-    
+  
+    @Override
     public boolean onKeyUp(int keyCode, KeyEvent event) {
 		int[] values = getValues(); 
 		update(values[0], values[1]);

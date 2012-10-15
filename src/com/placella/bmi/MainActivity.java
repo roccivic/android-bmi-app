@@ -56,6 +56,7 @@ public class MainActivity extends Activity {
     	startActivityForResult(intent, requestCode);
     }
     
+    @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent intent) {
     	if (requestCode == IMPERIAL) {
     		imperialHeight = intent.getIntExtra("height", 0);
@@ -79,6 +80,7 @@ public class MainActivity extends Activity {
 		return super.onOptionsItemSelected(item);
     }
     
+    @Override
     protected void onPause() {
         super.onPause();
         SharedPreferences.Editor editor = prefs.edit();
