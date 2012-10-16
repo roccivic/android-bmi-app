@@ -1,6 +1,7 @@
 package com.placella.bmi;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.*;
 import android.widget.*;
@@ -12,6 +13,7 @@ import android.widget.*;
  * @author Rouslan Placella
  */
 public class Output extends Activity {
+    private Output self = this;
     private double height = 0;
     private double weight = 0;
     /**
@@ -48,6 +50,13 @@ public class Output extends Activity {
                 bmi
             )
         );
+        // Bind click events
+        Button button = (Button) findViewById(R.id.more_info);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                startActivity(new Intent(self, LinkList.class));
+            }
+        });
     }
 
     /**

@@ -54,7 +54,6 @@
             android:gravity="center"
             android:text="@string/lt10"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -84,7 +83,6 @@
             android:gravity="center"
             android:text="@string/lt25"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -114,7 +112,6 @@
             android:gravity="center"
             android:text="@string/lt30"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -144,10 +141,10 @@
             android:gravity="center"
             android:text="@string/gt30"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/bar"
@@ -180,18 +177,17 @@
             android:gravity="center"
             android:text="@integer/Chart_3"
             android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        </LinearLayout>
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/bar"
-        android:contentDescription=""
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignRight="@+id/linearLayout4"
         android:layout_below="@+id/linearLayout4"
         android:layout_marginTop="20dip"
+        android:contentDescription=""
         android:scaleType="fitXY"
         android:src="@drawable/ic_bar" />
 
@@ -204,5 +200,15 @@
         android:contentDescription=""
         android:scaleType="center"
         android:src="@drawable/ic_marker" />
+
+    <Button
+        android:id="@+id/more_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout5"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_marginTop="10dp"
+        android:text="@string/info" />
 
 </RelativeLayout>

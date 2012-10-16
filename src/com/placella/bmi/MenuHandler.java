@@ -4,7 +4,6 @@ import android.app.*;
 import android.content.*;
 import android.net.Uri;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 /**
  * Contains a static function that handles
@@ -23,14 +22,8 @@ public class MenuHandler {
             Intent i = new Intent(Intent.ACTION_VIEW);
             Uri u = Uri.parse(url);
             i.setData(u);
-            try {
-                // Request to navigate to the web page
-                self.startActivity(i);
-            } catch (ActivityNotFoundException e) {
-                // Alert the user if we can't find a browser
-                Toast message = Toast.makeText(self, R.string.nobrowser, Toast.LENGTH_SHORT);
-                message.show();
-            }
+            // Request to navigate to the web page
+            self.startActivity(i);
         } else if (item.getItemId() == R.id.about) {
             // Show the about dialog
             new MessageDialog(self, R.string.about_text).show();

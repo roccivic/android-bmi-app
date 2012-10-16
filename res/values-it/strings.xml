@@ -25,5 +25,5 @@
     <string name="lt25">20 &#8211; 25</string>
     <string name="lt30">25 &#8211; 30</string>
     <string name="gt30">&gt; 30</string>
-    <string name="nobrowser">Browser non trovato</string>
+    <string name="info">Ulteriori imformazione a proposito dell\'IMC</string>
 </resources>

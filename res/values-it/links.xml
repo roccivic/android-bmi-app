@@ -1,0 +1,15 @@
+<resources>
+
+    <string-array name="labels">
+        <item>Articolo di wikipedia</item>
+        <item>Definizione</item>
+        <item>Articolo di ricerca</item>
+    </string-array>
+    
+    <string-array name="urls">
+        <item>http://it.wikipedia.org/wiki/Indice_di_massa_corporea</item>
+        <item>http://www.indicemasacorporal.org/it/definizione-BMI.php</item>
+        <item>http://adc.bmj.com/content/73/1/25.short</item>
+    </string-array>
+
+</resources>

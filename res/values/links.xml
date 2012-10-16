@@ -1,0 +1,15 @@
+<resources>
+
+    <string-array name="labels">
+        <item>Wikipedia article</item>
+        <item>Dictionary definition</item>
+        <item>Research Article</item>
+    </string-array>
+    
+    <string-array name="urls">
+        <item>http://en.wikipedia.org/wiki/Body_mass_index</item>
+        <item>http://dictionary.reference.com/browse/body+mass+index</item>
+        <item>http://adc.bmj.com/content/73/1/25.short</item>
+    </string-array>
+
+</resources>
